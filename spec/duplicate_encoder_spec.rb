@@ -1,4 +1,4 @@
-require_relative '../duplicate_encoder.rb'
+require_relative '../Ruby/duplicate_encoder.rb'
 # https://www.codewars.com/kata/54b42f9314d9229fd6000d9c/train/ruby
 
 describe "duplicate_encoder" do 
