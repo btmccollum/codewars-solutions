@@ -20,21 +20,21 @@
 #  1 1 1 3 1   1000 + 100 = 1100
 #  2 4 4 5 4   400 + 50 = 450
 
-def score( dice )
-    dice_results = {}
-    score = 0
+# def score( dice )
+#     dice_results = {}
+#     score = 0
     
-    # build hash of throws
-    dice.each do |num|
-      if dice_results[num]
-        dice_results[num] += 1
-      else
-        dice_resultes[num] = 1
-      end
-    end
+#     # build hash of throws
+#     dice.each do |num|
+#       if dice_results[num]
+#         dice_results[num] += 1
+#       else
+#         dice_resultes[num] = 1
+#       end
+#     end
     
-    # dice_results.each_pair do |k,v|
-    #   case v
-    #   when k = 1 && v 
-    # end
-  end
+#     # dice_results.each_pair do |k,v|
+#     #   case v
+#     #   when k = 1 && v 
+#     # end
+#   end
