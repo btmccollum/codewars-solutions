@@ -26,5 +26,10 @@ RSpec.describe '#valid?' do
     it 'should propery handle empty strings' do
       expect(valid?('')).to eq(true)
     end
+
+    it 'should be able to handle "|"' do 
+      expect(valid?('(([][||]))')).to eq(true)
+      expect(valid?('(([][|]|))')).to eq(false)
+    end
   end
 end

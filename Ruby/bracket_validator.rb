@@ -14,18 +14,24 @@ def valid?(code)
   valid_inputs = {
     '(': ')',
     '{': '}',
-    '[': ']'
+    '[': ']',
+    '|': '|'
   }
   opener_stack = []
 
   code.each_char do |char|
     next if char == ' '
 
+    if char == '|' && !opener_stack.include?('|')
+      opener_stack << char
+      next
+    end
+
     if char == '(' || char == '{' || char == '['
       opener_stack << char
     end
 
-    if char == ')' || char == '}' || char == ']'
+    if char == ')' || char == '}' || char == ']' || char == '|'
       # automatically false if nothing left in opener stack
       if opener_stack.length > 0
         char_to_check = opener_stack.pop
@@ -41,3 +47,4 @@ def valid?(code)
   # there should not be anything left by the end
   opener_stack.empty?
 end
+
