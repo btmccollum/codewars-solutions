@@ -116,3 +116,8 @@ def move_left(array, current_row, current_col, direction, visited)
   end
   return current_row, current_col, direction
 end
+
+# recursive solution 
+# def snail(array)
+#   array.empty? ? [] : array.shift + snail(array.transpose.reverse)
+# end
